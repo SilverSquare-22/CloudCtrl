@@ -1,0 +1,99 @@
+h1 { font-size: 35px; }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg, #7F00FF, #E100FF);
+    transition: background-image 1s ease;
+    margin: 0;
+} #stitle { font-size: 25px; }
+#main {
+    background-image: linear-gradient(270deg, #ababab, rgb(230, 230, 230));
+    box-shadow: 5px 5px 10px rgb(80, 80, 80);
+    border-radius: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    width: 50%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    padding: 50px;
+} form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} .form-label {
+    text-align: left;
+    width: 200px;
+} .form-control {
+    font-family: 'Comic Sans';
+    font-size: 19px;
+    border: 2px solid black;
+    padding-left: 10px;
+    height: 30px;
+    width: 250px;
+} .search-btn {
+    font-family: 'Comic Sans';
+    background-color: rgb(215, 235, 255);
+    font-size: 19px;
+    height: 35px;
+} .error-label {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+} .weather-card {
+    background: rgb(222, 222, 222);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 280px;
+    display: none;
+    animation: fadeIn 0.6s ease-in-out;
+} .weather-card img {
+    width: 80px;
+    height: 80px;
+} .weather-card h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+} .weather-card p {
+    margin: 5px 0;
+    font-size: 15px;
+} .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+} @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+} @media (max-width: 768px) {
+    h1 { font-size: 30px; }
+    #stitle { font-size: 20px; }
+    #main {
+        margin-top: 30%;
+        margin-bottom: 30%;
+    } .form-control {
+        font-size: 15px;
+        padding-left: 10px;
+        height: 22px;
+        width: 150px;
+    } .search-btn {
+        font-size: 15px;
+        height: 25px;
+    } .weather-card { width: 150px; }
+} @media (min-width: 1024px) {
+    h1 { font-size: 45px; }
+    #stitle { font-size: 30px; }
+    #main {
+        width: 45%;
+        border-radius: 20%;
+        padding: 50px;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    } .weather-card { width: 300px; }
+    .weather-card h2 { font-size: 25px; }
+    .weather-card p { font-size: 20px; }
+}
