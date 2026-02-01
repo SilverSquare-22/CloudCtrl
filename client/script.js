@@ -1,5 +1,3 @@
-const apiKey = "b3ac72d5d5120acde08d9d4d96ba3640";
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     const input = document.querySelector(".form-control");
@@ -58,10 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const res = await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`
+                `http://localhost:3000/api/weather?city=${encodeURIComponent(city)}`
             );
             if (!res.ok) throw new Error("City not found");
             const data = await res.json();
+            console.log("BACKEND DATA:", data);
+
 
             const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
